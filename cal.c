@@ -1,9 +1,15 @@
 #include  <stdio.h>
 #include <string.h>
 #include <time.h>
-
+void display(void);
 int main(int argc, char *argv[])
 {
+  display();
+  return 0;
+}
+
+void display(){
+    printf("start...");
     int f, i, len;
     double diff_t;
     time_t start_t, end_t;
@@ -27,5 +33,4 @@ int main(int argc, char *argv[])
     diff_t = difftime(end_t, start_t) * 1000;
     printf("计算和为 %ld \n", sum);
     printf("总消耗时间为 %f ms \n", diff_t);
-    return 0;
 }
